@@ -1,6 +1,6 @@
 ---
 id: 10661
-title: '办公室有鬼&middot;幸福里&middot;小感'
+title: '办公室有鬼; 幸福里;小感'
 date: 2010-01-24T01:09:00+00:00
 author: li
 layout: post

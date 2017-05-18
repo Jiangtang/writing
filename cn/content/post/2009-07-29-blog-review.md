@@ -1,6 +1,6 @@
 ---
 id: 10330
-title: '&ldquo;丽&middot;江行&rdquo;游记'
+title: '丽江行;游记'
 date: 2009-07-29T23:14:00+00:00
 author: jiang
 layout: post

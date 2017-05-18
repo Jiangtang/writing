@@ -1,0 +1,18 @@
+---
+title: 'In Search of Lost Time: 2016'
+author: Jiangtang Hu
+date: '2017-05-04'
+slug: in-search-of-lost-time-2016
+categories:
+  - data mining
+  - Machine Learning
+  - R
+  - Python
+tags:
+  - R
+  - Python
+  - Spark
+  - machine learning
+---
+
+2016 was gone, and I didn't even leave one sigle blog post.

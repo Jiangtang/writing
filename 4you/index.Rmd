@@ -1,5 +1,5 @@
 ---
-title: "Serious Peoms for Kids"
+title: "Serious Poems for Kids"
 author: ["Jiangtang Hu"]
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
@@ -7,8 +7,8 @@ documentclass: book
 link-citations: yes
 site: bookdown::bookdown_site
 
-description: "ModPo"
-url: 'http\://jiangtanghu.com/poem4kids'
+description: "Serious Poems for Kids"
+url: 'http\://jiangtanghu.com/4you'
 github-repo: Jiangtang/poem4kids
 twitter-handle: JiangtangHu
 
