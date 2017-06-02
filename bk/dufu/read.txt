@@ -1,0 +1,9 @@
+##sessionInfo()
+## Sys.setlocale("LC_ALL","zh_CN.utf-8")
+## Sys.setlocale("LC_ALL", 'en_US.UTF-8')
+
+Sys.setlocale(locale = "en_us.UTF-8")
+
+library(readxl)
+dufu <- read_excel("C:\\Users\\jhu\\Documents\\GitHub\\dufu\\raw\\dufu.xlsx")
+View(dufu)
