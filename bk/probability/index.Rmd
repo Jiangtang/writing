@@ -1,0 +1,60 @@
+---
+title: "Probability"
+output: html_notebook
+author: ["Jiangtang Hu"]
+date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+documentclass: book
+link-citations: yes
+site: bookdown::bookdown_site
+
+description: "Programming Notebook on Probability"
+url: 'http\://jiangtanghu.com/Probability'
+github-repo: Jiangtang/Probability
+twitter-handle: JiangtangHu
+
+
+---
+
+
+
+
+# Welcome {-}
+
+This is my programming notes on probability, mostly based on the [*Introduction to Probability*][1] by Joseph K. Blitzstein and Jessica Hwang. 
+
+<p style="text-align:center"> <img src="images/JosephBlitzstein.jpg" width="225" height="325" alt="Cover image" /> </p>
+
+
+----
+This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/). 
+
+## Software Used: R/Python {-}
+
+I use Rstudio/Notebooks for every single markdown page (in which R is the first-class language while Python is loosely supported ). Rstudio/Bookdown is used to manage all pages.  
+
+For R:
+
+```{r}
+print(paste0("R Base: ",package_version(R.version)))
+packinfo <- installed.packages(fields = c("Package", "Version"))
+packinfo[c("rmarkdown","bookdown","knitr","prob"),c("Package", "Version")]
+```
+
+For Python:
+
+```{python}
+#python
+import numpy
+import scipy
+
+print ("numpy",numpy.__version__)
+print ("scipy",scipy.__version__)
+```
+
+
+
+
+
+
+[1]: https://www.amazon.com/gp/product/1466575573/

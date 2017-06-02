@@ -1,0 +1,202 @@
+---
+title: "Probability"
+output: html_notebook
+author: ["Jiangtang Hu"]
+date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+documentclass: book
+link-citations: yes
+site: bookdown::bookdown_site
+
+description: "Programming Notebook on Probability"
+url: 'http\://jiangtanghu.com/Probability'
+github-repo: Jiangtang/Probability
+twitter-handle: JiangtangHu
+
+
+---
+
+
+
+
+# Welcome {-}
+
+This is my programming notes on probability, mostly based on the [*Introduction to Probability*][1] by Joseph K. Blitzstein and Jessica Hwang. 
+
+<p style="text-align:center"> <img src="images/JosephBlitzstein.jpg" width="225" height="325" alt="Cover image" /> </p>
+
+
+----
+This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/). 
+
+## Software Used: R/Python {-}
+
+I use Rstudio/Notebooks for every single markdown page (in which R is the first-class language while Python is loosely supported ). Rstudio/Bookdown is used to manage all pages.  
+
+For R:
+
+```{r}
+print(paste0("R Base: ",package_version(R.version)))
+packinfo <- installed.packages(fields = c("Package", "Version"))
+packinfo[c("rmarkdown","bookdown","knitr","prob"),c("Package", "Version")]
+```
+
+For Python:
+
+```{python}
+#python
+import numpy
+import scipy
+
+print ("numpy",numpy.__version__)
+print ("scipy",scipy.__version__)
+```
+
+
+
+
+
+
+[1]: https://www.amazon.com/gp/product/1466575573/
+
+<!--chapter:end:index.Rmd-->
+
+---
+title: ""
+output: html_notebook
+---
+
+# Chapter 1 Probability and counting
+
+## Example 1.2.2 (Coin flips), P.4
+
+```{r setup, include=FALSE}
+library(prob);
+```
+
+```{r}
+flip_coin <- function(n){
+    return(sample(c("H","T"), n, replace = TRUE))    
+}
+
+```
+
+```{r}
+flip_coin(10)
+```
+
+
+```{r}
+flip_coin(10)
+```
+
+```{r}
+tosscoin(2)
+
+```
+
+```{r}
+t10 = tosscoin(10)
+t10[1:10,]
+
+```
+
+```{r}
+dim(t10)
+typeof(t10)
+
+```
+
+```{python}
+import comp_prob_inference
+print(comp_prob_inference.flip_fair_coin())
+```
+
+
+```{python}
+import comp_prob_inference
+import matplotlib.pyplot as plt
+n = 100000
+heads_so_far = 0
+fraction_of_heads = []
+for i in range(n):
+    if comp_prob_inference.flip_fair_coin() == 'H':
+        heads_so_far += 1
+    fraction_of_heads.append(heads_so_far / (i+1))
+
+plt.figure(figsize=(8,4))
+plt.plot(range(1, n+1), fraction_of_heads)
+plt.xlabel('Number of flips')
+plt.ylabel('Fraction of heads')
+plt.show()
+```
+
+
+
+
+
+## Example 1.2.3 (pick a card), P.5
+
+```{r}
+cards(1)
+```
+
+
+
+
+## Example 1.4.8 (Birthday problem), P.11
+
+```{r}
+k <- 23
+1-prod((365-k+1):365)/365^k
+
+```
+
+
+```{r}
+pbirthday(k) 
+```
+
+```{r}
+p <- 0.5
+qbirthday(p) 
+```
+
+
+
+```{r}
+b <- sample(1:365,23,replace=TRUE)
+tabulate(b)
+
+r <- replicate(10^4, max(tabulate(sample(1:365,23,replace=TRUE))))
+sum(r>=2)/10^4
+```
+
+
+
+
+
+
+
+
+
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+
+
+
+
+
+
+
+
+
+
+
+
+<!--chapter:end:01_ch1.Rmd-->
+

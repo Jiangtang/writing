@@ -1,0 +1,187 @@
+---
+title: ""
+output: html_notebook
+---
+
+# Chapter 1 Probability and counting
+
+## Example 1.2.2 (Coin flips), P.4
+
+```{r setup, include=FALSE}
+library(prob);
+```
+
+```{r}
+flip_coin <- function(n){
+    return(sample(c("H","T"), n, replace = TRUE))    
+}
+
+```
+
+```{r}
+flip_coin(10)
+```
+
+
+```{r}
+flip_coin(10)
+```
+
+```{r}
+tosscoin(2)
+
+```
+
+```{r}
+t10 = tosscoin(10)
+t10[1:10,]
+
+```
+
+```{r}
+dim(t10)
+typeof(t10)
+
+```
+
+```{python}
+import comp_prob_inference
+print(comp_prob_inference.flip_fair_coin())
+```
+
+
+```{python}
+import comp_prob_inference
+import matplotlib.pyplot as plt
+n = 100000
+heads_so_far = 0
+fraction_of_heads = []
+for i in range(n):
+    if comp_prob_inference.flip_fair_coin() == 'H':
+        heads_so_far += 1
+    fraction_of_heads.append(heads_so_far / (i+1))
+
+plt.figure(figsize=(8,4))
+plt.plot(range(1, n+1), fraction_of_heads)
+plt.xlabel('Number of flips')
+plt.ylabel('Fraction of heads')
+plt.show()
+```
+
+
+
+
+
+## Example 1.2.3 (pick a card), P.5
+
+```{r}
+cards(1)
+```
+
+
+
+
+## Example 1.4.8 (Birthday problem), P.11
+
+```{r}
+k <- 23
+1-prod((365-k+1):365)/365^k
+
+```
+
+
+```{r}
+pbirthday(k) 
+```
+
+```{r}
+p <- 0.5
+qbirthday(p) 
+```
+
+
+
+```{r}
+b <- sample(1:365,23,replace=TRUE)
+tabulate(b)
+
+r <- replicate(10^4, max(tabulate(sample(1:365,23,replace=TRUE))))
+sum(r>=2)/10^4
+```
+
+
+
+
+
+
+
+
+
+## Example 1.4.10 (Leibniz’s mistake), P.13
+
+
+
+```{r}
+d2 = rolldie(2)
+table(rowSums(b))
+
+```
+
+
+
+
+
+## Example 1.4.11 (Committees and teams), P.13
+
+```{r}
+n = 4; k = 2;
+urnsamples(1:n, size = k, replace = FALSE, ordered = FALSE)
+```
+
+```{r}
+n = 4; k = 2;
+nsamp(n = n, k = k, replace = FALSE, ordered = FALSE)
+```
+
+
+
+## Example 1.4.20 (Bose-Einstein), P.17
+
+```{r}
+n = 4; k = 7;
+urnsamples(1:n, size = k, replace = TRUE, ordered = FALSE)
+```
+
+```{r}
+n = 4; k = 7;
+nsamp(n = n, k = k, replace = TRUE, ordered = FALSE)
+```
+
+## Example 1.6.4 (de Montmort’s matching problem), P.24
+
+```{r}
+n <- 100
+r <- replicate(10^4,sum(sample(n)==(1:n)))
+sum(r>=1)/10^4
+```
+
+
+
+
+
+
+
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+
+## Example 1.4.8 (Birthday problem), P.11
+## Example 1.4.8 (Birthday problem), P.11
+
+
+
+
+
+
+
+
+
